@@ -46,7 +46,7 @@ export default {
   },
   
   proxy: {
-    '/api/': { target: 'http://137.184.117.7:9010/book/', pathRewrite: {'^/api/': ''} }
+    '/api/': { target: 'http://137.184.117.77:8080/book/', pathRewrite: {'^/api/': ''} }
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
