@@ -46,7 +46,7 @@ export default {
   },
   
   proxy: {
-    '/api/': { target: 'https:alex-bookstore.com/book/', pathRewrite: {'^/api/': ''} }
+    '/api/': { target: 'https://alex-bookstore.com/book/', pathRewrite: {'^/api/': ''} }
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
