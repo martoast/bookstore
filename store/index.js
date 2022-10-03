@@ -12,14 +12,14 @@ export const actions = {
     async get({ commit }, params) {
         if (params) {
             await this.$axios
-                .get("/api/", {
+                .get("https://alex-bookstore.com/book/", {
                     params: { ...params}
                 })
                 .then((res) => {
                     commit("items", res.data);
                 });
         } else {
-            await this.$axios.get("/api/").then((res) => {
+            await this.$axios.get("https://alex-bookstore.com/book/").then((res) => {
                 commit("items", res.data);
             });
         }
@@ -27,7 +27,7 @@ export const actions = {
 
     async find({ commit }, ID) {
         await this.$axios
-            .get("/api/" + ID)
+            .get("https://alex-bookstore.com/book/" + ID)
             .then((res) => {
                 commit("book", res.data);
             });
@@ -36,15 +36,15 @@ export const actions = {
     async store({ commit }, params) {
         if (params.book.ID) {
             return this.$axios.put(
-                "/api/" + params.book.ID,
+                "https://alex-bookstore.com/book/" + params.book.ID,
                 params.form
             );
         }
-        return this.$axios.post("/api/", params.form);
+        return this.$axios.post("https://alex-bookstore.com/book/", params.form);
     },
 
     async delete({ commit }, ID) {
-        return this.$axios.delete("/api/" + ID);
+        return this.$axios.delete("https://alex-bookstore.com/book/" + ID);
     }
 };
 
