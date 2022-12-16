@@ -42,7 +42,7 @@ export default {
             try {
                 await this.$store.dispatch("delete", this.book.ID);
 
-                this.$bvToast.toast('Book was saved successfully', {
+                this.$bvToast.toast('Deleted successfully', {
                     title: "Book deleted successfully",
                     variant: "success",
                     solid: true,
